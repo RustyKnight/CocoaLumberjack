@@ -729,26 +729,26 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
 {
     // Direct accessors to be used only for performance
     @public
-    NSString *_message;
+    NSString * _Nonnull _message;
     DDLogLevel _level;
     DDLogFlag _flag;
     NSInteger _context;
-    NSString *_file;
-    NSString *_fileName;
-    NSString *_function;
+     NSString * _Nonnull _file;
+    NSString * _Nonnull _fileName;
+    NSString * _Nonnull _function;
     NSUInteger _line;
-    id _tag;
+    id _Nullable _tag;
     DDLogMessageOptions _options;
-    NSDate *_timestamp;
-    NSString *_threadID;
-    NSString *_threadName;
-    NSString *_queueLabel;
+    NSDate * _Nullable _timestamp;
+    NSString * _Nonnull _threadID;
+    NSString * _Nonnull _threadName;
+    NSString * _Nonnull _queueLabel;
 }
 
 /**
  *  Default `init` is not available
  */
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype _Nonnull )init NS_UNAVAILABLE;
 
 /**
  * Standard init method for a log message object.
@@ -777,16 +777,16 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
  *
  *  @return a new instance of a log message model object
  */
-- (instancetype)initWithMessage:(NSString *)message
+- (instancetype _Nonnull )initWithMessage:(NSString * _Nonnull )message
                           level:(DDLogLevel)level
                            flag:(DDLogFlag)flag
                         context:(NSInteger)context
-                           file:(NSString *)file
-                       function:(NSString *)function
+                           file:(NSString * _Nonnull )file
+                       function:(NSString * _Nonnull )function
                            line:(NSUInteger)line
-                            tag:(id)tag
+                            tag:(id _Nullable )tag
                         options:(DDLogMessageOptions)options
-                      timestamp:(NSDate *)timestamp NS_DESIGNATED_INITIALIZER;
+                      timestamp:(NSDate * _Nullable )timestamp NS_DESIGNATED_INITIALIZER;
 
 /**
  * Read-only properties
@@ -795,20 +795,20 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
 /**
  *  The log message
  */
-@property (readonly, nonatomic) NSString *message;
+@property (readonly, nonatomic) NSString * _Nonnull message;
 @property (readonly, nonatomic) DDLogLevel level;
 @property (readonly, nonatomic) DDLogFlag flag;
 @property (readonly, nonatomic) NSInteger context;
-@property (readonly, nonatomic) NSString *file;
-@property (readonly, nonatomic) NSString *fileName;
-@property (readonly, nonatomic) NSString *function;
+@property (readonly, nonatomic) NSString * _Nonnull file;
+@property (readonly, nonatomic) NSString * _Nonnull fileName;
+@property (readonly, nonatomic) NSString * _Nonnull function;
 @property (readonly, nonatomic) NSUInteger line;
-@property (readonly, nonatomic) id tag;
+@property (readonly, nonatomic) id _Nullable tag;
 @property (readonly, nonatomic) DDLogMessageOptions options;
-@property (readonly, nonatomic) NSDate *timestamp;
-@property (readonly, nonatomic) NSString *threadID; // ID as it appears in NSLog calculated from the machThreadID
-@property (readonly, nonatomic) NSString *threadName;
-@property (readonly, nonatomic) NSString *queueLabel;
+@property (readonly, nonatomic) NSDate * _Nullable timestamp;
+@property (readonly, nonatomic) NSString * _Nonnull threadID; // ID as it appears in NSLog calculated from the machThreadID
+@property (readonly, nonatomic) NSString * _Nonnull threadName;
+@property (readonly, nonatomic) NSString * _Nonnull queueLabel;
 
 @end
 
@@ -840,8 +840,8 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
     dispatch_queue_t _loggerQueue;
 }
 
-@property (nonatomic, strong) id <DDLogFormatter> logFormatter;
-@property (nonatomic, DISPATCH_QUEUE_REFERENCE_TYPE) dispatch_queue_t loggerQueue;
+@property (nonatomic, strong) id<DDLogFormatter> _Nonnull  logFormatter;
+@property (nonatomic, DISPATCH_QUEUE_REFERENCE_TYPE) dispatch_queue_t _Nonnull  loggerQueue;
 
 // For thread-safety assertions
 
