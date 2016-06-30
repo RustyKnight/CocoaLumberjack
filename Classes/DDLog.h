@@ -240,7 +240,7 @@ NSString * _Nonnull DDExtractFileNameWithoutExtension(const char * _Nonnull file
        flag:(DDLogFlag)flag
     context:(NSInteger)context
        file:(const char * _Nonnull )file
-   function:(const char * _Nullable )function
+   function:(const char * _Nonnull )function
        line:(NSUInteger)line
         tag:(id _Nullable)tag
      format:(NSString * _Nonnull)format, ... NS_FORMAT_FUNCTION(9,10);
@@ -266,7 +266,7 @@ NSString * _Nonnull DDExtractFileNameWithoutExtension(const char * _Nonnull file
        flag:(DDLogFlag)flag
     context:(NSInteger)context
        file:(const char * _Nonnull )file
-   function:(const char * _Nullable )function
+   function:(const char * _Nonnull )function
        line:(NSUInteger)line
         tag:(id _Nullable)tag
      format:(NSString * _Nonnull )format, ... NS_FORMAT_FUNCTION(9,10);
@@ -293,7 +293,7 @@ NSString * _Nonnull DDExtractFileNameWithoutExtension(const char * _Nonnull file
        flag:(DDLogFlag)flag
     context:(NSInteger)context
        file:(const char *_Nonnull)file
-   function:(const char *_Nullable)function
+   function:(const char *_Nonnull)function
        line:(NSUInteger)line
         tag:(id _Nullable)tag
      format:(NSString *_Nonnull)format
@@ -321,7 +321,7 @@ NSString * _Nonnull DDExtractFileNameWithoutExtension(const char * _Nonnull file
        flag:(DDLogFlag)flag
     context:(NSInteger)context
        file:(const char * _Nonnull)file
-   function:(const char * _Nullable)function
+   function:(const char * _Nonnull)function
        line:(NSUInteger)line
         tag:(id _Nullable)tag
      format:(NSString * _Nonnull)format
@@ -735,7 +735,7 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
     NSInteger _context;
      NSString * _Nonnull _file;
     NSString * _Nonnull _fileName;
-    NSString * _Nullable _function;
+    NSString * _Nonnull _function;
     NSUInteger _line;
     id _Nullable _tag;
     DDLogMessageOptions _options;
@@ -782,7 +782,7 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
                            flag:(DDLogFlag)flag
                         context:(NSInteger)context
                            file:(NSString * _Nonnull )file
-                       function:(NSString * _Nullable )function
+                       function:(NSString * _Nonnull )function
                            line:(NSUInteger)line
                             tag:(id _Nullable )tag
                         options:(DDLogMessageOptions)options
@@ -801,7 +801,7 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
 @property (readonly, nonatomic) NSInteger context;
 @property (readonly, nonatomic) NSString * _Nonnull file;
 @property (readonly, nonatomic) NSString * _Nonnull fileName;
-@property (readonly, nonatomic) NSString * _Nullable function;
+@property (readonly, nonatomic) NSString * _Nonnull function;
 @property (readonly, nonatomic) NSUInteger line;
 @property (readonly, nonatomic) id _Nullable tag;
 @property (readonly, nonatomic) DDLogMessageOptions options;

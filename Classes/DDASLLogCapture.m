@@ -149,7 +149,7 @@ static void (*dd_asl_release)(aslresponse obj);
                                                                flag:flag
                                                             context:0
                                                                file:@"DDASLLogCapture"
-                                                           function:0
+                                                           function:@""
                                                                line:0
                                                                 tag:nil
                                                             options:0
