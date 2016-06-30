@@ -174,7 +174,7 @@ typedef NS_ENUM(NSUInteger, DDLogLevel){
  *
  *  @return the file name
  */
-NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
+NSString * _Nonnull DDExtractFileNameWithoutExtension(const char * _Nonnull filePath, BOOL copy);
 
 /**
  * The THIS_FILE macro gives you an NSString of the file name.
@@ -211,13 +211,13 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  *
  *  @return The singleton `DDLog`.
  */
-+ (instancetype)sharedInstance;
++ (instancetype _Nonnull )sharedInstance;
 
 /**
  * Provides access to the underlying logging queue.
  * This may be helpful to Logger classes for things like thread synchronization.
  **/
-+ (dispatch_queue_t)loggingQueue;
++ (dispatch_queue_t _Nonnull )loggingQueue;
 
 /**
  * Logging Primitive.
@@ -239,11 +239,11 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
       level:(DDLogLevel)level
        flag:(DDLogFlag)flag
     context:(NSInteger)context
-       file:(const char *)file
-   function:(const char *)function
+       file:(const char * _Nonnull )file
+   function:(const char * _Nullable )function
        line:(NSUInteger)line
-        tag:(id)tag
-     format:(NSString *)format, ... NS_FORMAT_FUNCTION(9,10);
+        tag:(id _Nullable)tag
+     format:(NSString * _Nonnull)format, ... NS_FORMAT_FUNCTION(9,10);
 
 /**
  * Logging Primitive.
@@ -265,11 +265,11 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
       level:(DDLogLevel)level
        flag:(DDLogFlag)flag
     context:(NSInteger)context
-       file:(const char *)file
-   function:(const char *)function
+       file:(const char * _Nonnull )file
+   function:(const char * _Nullable )function
        line:(NSUInteger)line
-        tag:(id)tag
-     format:(NSString *)format, ... NS_FORMAT_FUNCTION(9,10);
+        tag:(id _Nullable)tag
+     format:(NSString * _Nonnull )format, ... NS_FORMAT_FUNCTION(9,10);
 
 /**
  * Logging Primitive.
@@ -292,11 +292,11 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
       level:(DDLogLevel)level
        flag:(DDLogFlag)flag
     context:(NSInteger)context
-       file:(const char *)file
-   function:(const char *)function
+       file:(const char *_Nonnull)file
+   function:(const char *_Nullable)function
        line:(NSUInteger)line
-        tag:(id)tag
-     format:(NSString *)format
+        tag:(id _Nullable)tag
+     format:(NSString *_Nonnull)format
        args:(va_list)argList;
 
 /**
@@ -320,11 +320,11 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
       level:(DDLogLevel)level
        flag:(DDLogFlag)flag
     context:(NSInteger)context
-       file:(const char *)file
-   function:(const char *)function
+       file:(const char * _Nonnull)file
+   function:(const char * _Nullable)function
        line:(NSUInteger)line
-        tag:(id)tag
-     format:(NSString *)format
+        tag:(id _Nullable)tag
+     format:(NSString * _Nonnull)format
        args:(va_list)argList;
 
 /**
@@ -336,7 +336,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  *  @param logMessage   the log message stored in a `DDLogMessage` model object
  */
 + (void)log:(BOOL)asynchronous
-    message:(DDLogMessage *)logMessage;
+    message:(DDLogMessage * _Nonnull)logMessage;
 
 /**
  * Logging Primitive.
@@ -347,7 +347,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  *  @param logMessage   the log message stored in a `DDLogMessage` model object
  */
 - (void)log:(BOOL)asynchronous
-    message:(DDLogMessage *)logMessage;
+    message:(DDLogMessage * _Nonnull)logMessage;
 
 /**
  * Since logging can be asynchronous, there may be times when you want to flush the logs.
@@ -376,14 +376,14 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  *
  * This is equivalent to invoking `[DDLog addLogger:logger withLogLevel:DDLogLevelAll]`.
  **/
-+ (void)addLogger:(id <DDLogger>)logger;
++ (void)addLogger:(id <DDLogger> _Nonnull)logger;
 
 /**
  * Adds the logger to the system.
  *
  * This is equivalent to invoking `[DDLog addLogger:logger withLogLevel:DDLogLevelAll]`.
  **/
-- (void)addLogger:(id <DDLogger>)logger;
+- (void)addLogger:(id <DDLogger> _Nonnull)logger;
 
 /**
  * Adds the logger to the system.
@@ -421,7 +421,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  *
  * `((DDLogLevelAll ^ DDLogLevelVerbose) | DDLogLevelInfo)`
  **/
-+ (void)addLogger:(id <DDLogger>)logger withLevel:(DDLogLevel)level;
++ (void)addLogger:(id <DDLogger> _Nonnull)logger withLevel:(DDLogLevel)level;
 
 /**
  * Adds the logger to the system.
@@ -459,17 +459,17 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  *
  * `((DDLogLevelAll ^ DDLogLevelVerbose) | DDLogLevelInfo)`
  **/
-- (void)addLogger:(id <DDLogger>)logger withLevel:(DDLogLevel)level;
+- (void)addLogger:(id <DDLogger> _Nonnull)logger withLevel:(DDLogLevel)level;
 
 /**
  *  Remove the logger from the system
  */
-+ (void)removeLogger:(id <DDLogger>)logger;
++ (void)removeLogger:(id <DDLogger> _Nonnull)logger;
 
 /**
  *  Remove the logger from the system
  */
-- (void)removeLogger:(id <DDLogger>)logger;
+- (void)removeLogger:(id <DDLogger> _Nonnull) _Nonnulllogger;
 
 /**
  *  Remove all the current loggers
@@ -484,12 +484,12 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
 /**
  *  Return all the current loggers
  */
-+ (NSArray *)allLoggers;
++ (NSArray * _Nonnull)allLoggers;
 
 /**
  *  Return all the current loggers
  */
-- (NSArray *)allLoggers;
+- (NSArray * _Nonnull)allLoggers;
 
 /**
  * Registered Dynamic Logging
@@ -501,26 +501,26 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
 /**
  *  Returns an array with the classes that are using registered dynamic logging
  */
-+ (NSArray *)registeredClasses;
++ (NSArray * _Nonnull)registeredClasses;
 
 /**
  *  Returns an array with the classes names that are using registered dynamic logging
  */
-+ (NSArray *)registeredClassNames;
++ (NSArray * _Nonnull)registeredClassNames;
 
 /**
  *  Returns the current log level for a certain class
  *
  *  @param aClass `Class` param
  */
-+ (DDLogLevel)levelForClass:(Class)aClass;
++ (DDLogLevel)levelForClass:(Class _Nonnull)aClass;
 
 /**
  *  Returns the current log level for a certain class
  *
  *  @param aClassName string param
  */
-+ (DDLogLevel)levelForClassWithName:(NSString *)aClassName;
++ (DDLogLevel)levelForClassWithName:(NSString * _Nonnull)aClassName;
 
 /**
  *  Set the log level for a certain class
@@ -528,7 +528,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  *  @param level  the new level
  *  @param aClass `Class` param
  */
-+ (void)setLevel:(DDLogLevel)level forClass:(Class)aClass;
++ (void)setLevel:(DDLogLevel)level forClass:(Class _Nonnull)aClass;
 
 /**
  *  Set the log level for a certain class
@@ -536,7 +536,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  *  @param level      the new level
  *  @param aClassName string param
  */
-+ (void)setLevel:(DDLogLevel)level forClassWithName:(NSString *)aClassName;
++ (void)setLevel:(DDLogLevel)level forClassWithName:(NSString * _Nonnull)aClassName;
 
 @end
 
@@ -556,7 +556,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  *
  *  @param logMessage the message (model)
  */
-- (void)logMessage:(DDLogMessage *)logMessage;
+- (void)logMessage:(DDLogMessage * _Nonnull)logMessage;
 
 /**
  * Formatters may optionally be added to any logger.
@@ -564,7 +564,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  * If no formatter is set, the logger simply logs the message as it is given in logMessage,
  * or it may use its own built in formatting style.
  **/
-@property (nonatomic, strong) id <DDLogFormatter> logFormatter;
+@property (nonatomic, strong) id <DDLogFormatter> _Nullable logFormatter;
 
 @optional
 
@@ -603,7 +603,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  * Thus, a dedicated dispatch queue is used for each logger.
  * Logger implementations may optionally choose to provide their own dispatch queue.
  **/
-@property (nonatomic, DISPATCH_QUEUE_REFERENCE_TYPE, readonly) dispatch_queue_t loggerQueue;
+@property (nonatomic, DISPATCH_QUEUE_REFERENCE_TYPE, readonly) dispatch_queue_t _Nonnull loggerQueue;
 
 /**
  * If the logger implementation does not choose to provide its own queue,
@@ -611,7 +611,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  * The created queue will receive its name from this method.
  * This may be helpful for debugging or profiling reasons.
  **/
-@property (nonatomic, readonly) NSString *loggerName;
+@property (nonatomic, readonly) NSString * _Nonnull loggerName;
 
 @end
 
@@ -636,7 +636,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  * The formatter may also optionally filter the log message by returning nil,
  * in which case the logger will not log the message.
  **/
-- (NSString *)formatLogMessage:(DDLogMessage *)logMessage;
+- (NSString * _Nonnull)formatLogMessage:(DDLogMessage * _Nonnull)logMessage;
 
 @optional
 
@@ -649,12 +649,12 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  * Or if a formatter has potentially thread-unsafe code (e.g. NSDateFormatter),
  * it could possibly use these hooks to switch to thread-safe versions of the code.
  **/
-- (void)didAddToLogger:(id <DDLogger>)logger;
+- (void)didAddToLogger:(id <DDLogger> _Nonnull)logger;
 
 /**
  *  See the above description for `didAddToLogger:`
  */
-- (void)willRemoveFromLogger:(id <DDLogger>)logger;
+- (void)willRemoveFromLogger:(id <DDLogger> _Nonnull)logger;
 
 @end
 
@@ -735,7 +735,7 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
     NSInteger _context;
      NSString * _Nonnull _file;
     NSString * _Nonnull _fileName;
-    NSString * _Nonnull _function;
+    NSString * _Nullable _function;
     NSUInteger _line;
     id _Nullable _tag;
     DDLogMessageOptions _options;
@@ -782,7 +782,7 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
                            flag:(DDLogFlag)flag
                         context:(NSInteger)context
                            file:(NSString * _Nonnull )file
-                       function:(NSString * _Nonnull )function
+                       function:(NSString * _Nullable )function
                            line:(NSUInteger)line
                             tag:(id _Nullable )tag
                         options:(DDLogMessageOptions)options
@@ -801,7 +801,7 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions){
 @property (readonly, nonatomic) NSInteger context;
 @property (readonly, nonatomic) NSString * _Nonnull file;
 @property (readonly, nonatomic) NSString * _Nonnull fileName;
-@property (readonly, nonatomic) NSString * _Nonnull function;
+@property (readonly, nonatomic) NSString * _Nullable function;
 @property (readonly, nonatomic) NSUInteger line;
 @property (readonly, nonatomic) id _Nullable tag;
 @property (readonly, nonatomic) DDLogMessageOptions options;
