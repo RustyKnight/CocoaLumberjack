@@ -118,10 +118,10 @@ public func DDLogError( message: @autoclosure() -> String, level: DDLogLevel = d
 /// Analogous to the C preprocessor macro `THIS_FILE`.
 public func CurrentFileName(fileName: StaticString = #file) -> String {
     var str = fileName.description
-    if let idx = str.range(of: "/", options: .backwardsSearch)?.upperBound {
+    if let idx = str.range(of: "/", options: .backwards)?.upperBound {
         str = str.substring(from: idx)
     }
-    if let idx = str.range(of: ".", options: .backwardsSearch)?.lowerBound {
+    if let idx = str.range(of: ".", options: .backwards)?.lowerBound {
         str = str.substring(from: idx)
     }
     return str
