@@ -1242,6 +1242,9 @@
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0800;
 				TargetAttributes = {
+					18F3BEF61A81D8B700692297 = {
+						LastSwiftMigration = 0800;
+					};
 					18F3BF5E1A81DD2E00692297 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 337Z8P6WA4;
@@ -1249,6 +1252,7 @@
 					};
 					18F3BFD61A81E06E00692297 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0800;
 					};
 					18F3BFF11A81E0C700692297 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1259,11 +1263,13 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 337Z8P6WA4;
 						DevelopmentTeamName = "BEAM COMMUNICATIONS PTY LTD";
+						LastSwiftMigration = 0800;
 					};
 					19190EEA1B84D826008D059E = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 337Z8P6WA4;
 						DevelopmentTeamName = "BEAM COMMUNICATIONS PTY LTD";
+						LastSwiftMigration = 0800;
 					};
 					19406BE01BDBABFF001194DC = {
 						CreatedOnToolsVersion = 7.1;
@@ -1273,10 +1279,12 @@
 					19D90B071BBFA9DB00947169 = {
 						DevelopmentTeam = 337Z8P6WA4;
 						DevelopmentTeamName = "BEAM COMMUNICATIONS PTY LTD";
+						LastSwiftMigration = 0800;
 					};
 					19D90B281BBFAA7500947169 = {
 						DevelopmentTeam = 337Z8P6WA4;
 						DevelopmentTeamName = "BEAM COMMUNICATIONS PTY LTD";
+						LastSwiftMigration = 0800;
 					};
 					19EC14661B84D134000EC2E7 = {
 						CreatedOnToolsVersion = 7.0;
@@ -1292,14 +1300,19 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 337Z8P6WA4;
 						DevelopmentTeamName = "BEAM COMMUNICATIONS PTY LTD";
+						LastSwiftMigration = 0800;
 					};
 					19FF460E1B8B4D1400B43179 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 337Z8P6WA4;
 						DevelopmentTeamName = "BEAM COMMUNICATIONS PTY LTD";
+						LastSwiftMigration = 0800;
 					};
 					55CCBEFE19BA679200957A39 = {
 						CreatedOnToolsVersion = 6.0;
+					};
+					DCB3185014EB418E001CFBEE = {
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -1777,6 +1790,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 				WRAPPER_EXTENSION = framework;
@@ -1806,6 +1820,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvos appletvsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 				WRAPPER_EXTENSION = framework;
@@ -1867,6 +1882,7 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "$(BUILT_PRODUCTS_DIR)/include";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1883,6 +1899,7 @@
 				PUBLIC_HEADERS_FOLDER_PATH = "$(BUILT_PRODUCTS_DIR)/include";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1942,6 +1959,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 				WRAPPER_EXTENSION = framework;
@@ -1967,6 +1985,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 				WRAPPER_EXTENSION = framework;
@@ -1991,6 +2010,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 				WRAPPER_EXTENSION = framework;
@@ -2016,6 +2036,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "watchsimulator watchos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 				WRAPPER_EXTENSION = framework;
@@ -2080,6 +2101,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -2103,6 +2125,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
@@ -2125,6 +2148,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -2148,6 +2172,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
@@ -2253,6 +2278,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2277,6 +2303,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2300,6 +2327,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2324,6 +2352,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2480,6 +2509,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 				WRAPPER_EXTENSION = framework;
@@ -2508,6 +2538,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx appletvsimulator appletvos";
+				SWIFT_VERSION = 3.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 				WRAPPER_EXTENSION = framework;
