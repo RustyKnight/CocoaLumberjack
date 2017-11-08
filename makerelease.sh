@@ -1,5 +1,3 @@
-sudo xcode-select -s /Applications/Xcode-beta.app/Contents/Developer
-xcodebuild -version
 rm *.zip
 rm -rf Carthage
 if [ "$1" == "-debug" ]; then
